@@ -1,13 +1,14 @@
-const jokeStart = ["1","2","3"];
-const jokeMid = ["4","5","6"];
-const jokeEnd = ["7","8","9"];
+const jokeStart = ["hi ","hello ","howdy "];
+const jokeMid = ["neighbor ","partner ","friend "];
+const jokeEnd = ["how are you?","hows it going?","whats up?"];
 
 const jokeStash =[jokeStart,jokeMid, jokeEnd];
 
 const randomMess = (stash) =>{
     let randomMessage = "";
     for(i in stash){
-        let rand =Math.floor( Math.random * stash[i].length);
+        let rand =Math.floor( Math.random() * stash[i].length);
+        console.log(rand);
         randomMessage += stash[i][rand];
     }
     return randomMessage;
